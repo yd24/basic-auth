@@ -9,5 +9,6 @@ const createUser = require('./user-model');
 const UserModel = createUser(sequelize);
 
 module.exports = {
+    sequelize,
     User: UserModel,
 };
