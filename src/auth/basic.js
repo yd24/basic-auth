@@ -6,6 +6,7 @@ const express = require('express');
 const { User } = require('../models');
 
 async function basicAuth(req, res, next) {
+    console.log('woof');
     const credentials = req.headers.authorization.split(' ')[1];
     const decoded = base64.decode(credentials);
     const extracted = decoded.split(':');

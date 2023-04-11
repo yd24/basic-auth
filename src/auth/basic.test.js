@@ -31,17 +31,10 @@ describe('Testing basic authentication', () => {
             body: {},
         };
 
-        let dummyStatus = 0;
-        let dummyData = ''; 
         const resDummy = {
-            status: (code) => {
-                dummyStatus = code;
-                return this;
-            },
-            send: (data) => {
-                dummyData = data;
-                return this;
-            },
+            status: jest.fn(() => resDummy),
+            json: jest.fn(() => resDummy),
+            send: jest.fn(() => resDummy),
         };
 
         const next = jest.fn();
