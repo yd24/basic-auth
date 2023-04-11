@@ -1,5 +1,6 @@
 'use strict';
 
+require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const db_url = process.env.DB_URL || 'sqlite:memory:';
 const sequelize = new Sequelize(db_url);
